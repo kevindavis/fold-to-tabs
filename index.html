@@ -3,27 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Example of responsive design using Bootstrap 3">
+    <meta name="description" content="Example of responsive design using Bootstrap 3 and enquire.js">
     <meta name="author" content="Kevin Davis">
 
     <title>Fold into tabs!</title>
 
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fold-to-tabs.css" rel="stylesheet">
-
-    <script type="text/javascript">
-      // on shrink to medium:
-      // * hide section headers
-      // * show nav
-      // * hide all but one section
-      // * activate right tab
-
-      // on grow to large:
-      // * show section headers
-      // * hide nav
-      // * show all sections
-    </script>
-
   </head>
   <body>
 
@@ -32,36 +17,58 @@
       <div>
         <h1>Fold into tabs!</h1>
         <p>What's this all about?</p>
-        <p>This is an example of responsive design using Bootstrap 3.</p> 
-        <p class="visible-lg">You're using a large screen - resize your browser to see how smaller screen devices.</p>
-        <!-- be clever and show different descriptions for different sizes -->
+        <p>This is an example of responsive design using <a href="http://getbootstrap.com">Bootstrap 3</a> and <a href="http://wicky.nillia.ms/enquire.js/">enquire.js</a>.</p> 
+        <p class="visible-lg">You're using a large screen - resize your browser to see how this shows up on smaller screens.</p>
+        <p class="visible-md">You're using a medium sized screen - resize your browser to see how this shows up on smaller screens.</p>
       </div>
 
       <div class="row">
 
-        <ul class="nav nav-tabs hidden-lg">
-          <li class="active"><a href="#">Section 1</a></li>
-          <li><a href="#">Section 2</a></li>
-          <li><a href="#">Section 3</a></li>
+        <ul id="tabs" class="nav nav-tabs hidden-lg">
+          <li class="active"><a href="#section1">Section 1</a></li>
+          <li><a href="#section2">Section 2</a></li>
+          <li><a href="#section3">Section 3</a></li>
         </ul>
 
-        <div class="col-lg-4">
-          <h2 class="visible-lg">Section 1</h2>
-          <p>Fixie cliche before they sold out ethnic meh Intelligentsia messenger bag, farm-to-table mlkshk vegan seitan DIY. Tattooed locavore cornhole Cosby sweater banjo seitan kitsch, quinoa Tumblr selvage tote bag brunch before they sold out. Banjo Bushwick mixtape twee try-hard. Ethnic Odd Future kogi sriracha irony, readymade mustache disrupt meh semiotics kitsch selfies fashion axe mlkshk. Literally pour-over post-ironic, fingerstache Truffaut flexitarian Pitchfork butcher. Cray four loko tattooed, selvage Terry Richardson vinyl Schlitz fanny pack raw denim shabby chic occupy. Hashtag swag semiotics direct trade, Portland hella fanny pack plaid lomo Intelligentsia retro umami slow-carb mixtape.</p>
+        <div class="tab-content">
+          <div id="section1" class="col-lg-4 lg-visible active tab-pane">
+            <h2 class="visible-lg">Section 1</h2>
+            <p>Fixie cliche before they sold out ethnic meh Intelligentsia messenger bag, farm-to-table mlkshk vegan seitan DIY. Tattooed locavore cornhole Cosby sweater banjo seitan kitsch, quinoa Tumblr selvage tote bag brunch before they sold out. Banjo Bushwick mixtape twee try-hard. Ethnic Odd Future kogi sriracha irony, readymade mustache disrupt meh semiotics kitsch selfies fashion axe mlkshk. Literally pour-over post-ironic, fingerstache Truffaut flexitarian Pitchfork butcher. Cray four loko tattooed, selvage Terry Richardson vinyl Schlitz fanny pack raw denim shabby chic occupy. Hashtag swag semiotics direct trade, Portland hella fanny pack plaid lomo Intelligentsia retro umami slow-carb mixtape.</p>
+          </div>
+          <div id="section2" class="col-lg-4 lg-visible tab-pane">
+            <h2 class="visible-lg">Section 2</h2>
+            <p>Fixie2 cliche before they sold out ethnic meh Intelligentsia messenger bag, farm-to-table mlkshk vegan seitan DIY. Tattooed locavore cornhole Cosby sweater banjo seitan kitsch, quinoa Tumblr selvage tote bag brunch before they sold out. Banjo Bushwick mixtape twee try-hard. Ethnic Odd Future kogi sriracha irony, readymade mustache disrupt meh semiotics kitsch selfies fashion axe mlkshk. Literally pour-over post-ironic, fingerstache Truffaut flexitarian Pitchfork butcher. Cray four loko tattooed, selvage Terry Richardson vinyl Schlitz fanny pack raw denim shabby chic occupy. Hashtag swag semiotics direct trade, Portland hella fanny pack plaid lomo Intelligentsia retro umami slow-carb mixtape.</p>
+          </div>
+          <div id="section3" class="col-lg-4 lg-visible tab-pane">
+            <h2 class="visible-lg">Section 3</h2>
+            <p>Fixie3 cliche before they sold out ethnic meh Intelligentsia messenger bag, farm-to-table mlkshk vegan seitan DIY. Tattooed locavore cornhole Cosby sweater banjo seitan kitsch, quinoa Tumblr selvage tote bag brunch before they sold out. Banjo Bushwick mixtape twee try-hard. Ethnic Odd Future kogi sriracha irony, readymade mustache disrupt meh semiotics kitsch selfies fashion axe mlkshk. Literally pour-over post-ironic, fingerstache Truffaut flexitarian Pitchfork butcher. Cray four loko tattooed, selvage Terry Richardson vinyl Schlitz fanny pack raw denim shabby chic occupy. Hashtag swag semiotics direct trade, Portland hella fanny pack plaid lomo Intelligentsia retro umami slow-carb mixtape.</p>
+          </div>   
         </div>
 
-        <div class="col-lg-4 visible-lg">
-          <h2 class="visible-lg">Section 2</h2>
-          <p>Fixie cliche before they sold out ethnic meh Intelligentsia messenger bag, farm-to-table mlkshk vegan seitan DIY. Tattooed locavore cornhole Cosby sweater banjo seitan kitsch, quinoa Tumblr selvage tote bag brunch before they sold out. Banjo Bushwick mixtape twee try-hard. Ethnic Odd Future kogi sriracha irony, readymade mustache disrupt meh semiotics kitsch selfies fashion axe mlkshk. Literally pour-over post-ironic, fingerstache Truffaut flexitarian Pitchfork butcher. Cray four loko tattooed, selvage Terry Richardson vinyl Schlitz fanny pack raw denim shabby chic occupy. Hashtag swag semiotics direct trade, Portland hella fanny pack plaid lomo Intelligentsia retro umami slow-carb mixtape.</p>
-        </div>
-
-        <div class="col-lg-4 visible-lg">
-          <h2 class="visible-lg">Section 3</h2>
-          <p>Fixie cliche before they sold out ethnic meh Intelligentsia messenger bag, farm-to-table mlkshk vegan seitan DIY. Tattooed locavore cornhole Cosby sweater banjo seitan kitsch, quinoa Tumblr selvage tote bag brunch before they sold out. Banjo Bushwick mixtape twee try-hard. Ethnic Odd Future kogi sriracha irony, readymade mustache disrupt meh semiotics kitsch selfies fashion axe mlkshk. Literally pour-over post-ironic, fingerstache Truffaut flexitarian Pitchfork butcher. Cray four loko tattooed, selvage Terry Richardson vinyl Schlitz fanny pack raw denim shabby chic occupy. Hashtag swag semiotics direct trade, Portland hella fanny pack plaid lomo Intelligentsia retro umami slow-carb mixtape.</p>
-        </div>
       </div>
 
     </div>
+
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/enquire.min.js"></script>
+    <script type="text/javascript">
+      $('#tabs a').click(function (e) {
+        e.preventDefault();
+        $(this).tab('show');
+      });
+
+      // large resolution
+      enquire.register("screen and (min-width:1200px)", {
+        match: function(){
+          $('.tab-content>div').removeClass('tab-pane');
+        },
+
+        unmatch: function(){
+          $('.tab-content>div').addClass('tab-pane');
+        } 
+      });
+    </script>
 
   </body>
 </html>
